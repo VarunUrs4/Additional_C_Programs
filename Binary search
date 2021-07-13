@@ -1,7 +1,7 @@
 //WAP to implement binary search.
 #include<stdio.h>
 
-static int main()
+int main()
 {   int arr[10], i, n, num;
     int beg, end, mid, found=0;
     printf("\n Enter the number of elements in the array :");
