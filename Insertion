@@ -1,0 +1,27 @@
+//WAP  to insert a number at a given location.
+
+#include<stdio.h>
+
+int main()
+{
+    int i ,n, num ,loc,a[10];
+    printf("Enter the number of elements in the array : ");
+    scanf("%d",&n);
+    printf("\nEnter the values : ");
+    for(i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    printf("\n Enter the number to be inserted: ");
+    scanf("%d",&num);
+    printf("\n Enter the position at which the number has to be added : ");
+    scanf("%d",&loc);
+
+    for(i=n-1;i>=loc;i--)
+      a[i+1] = a[i];
+    a[loc] = num;
+    n++;
+    printf("\n The array after insertion of %d is: \n",num);
+
+    for(i=0;i<n;i++)
+      printf("\t %d",a[i]);
+    return 0;
+}
