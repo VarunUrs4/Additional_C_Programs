@@ -1,0 +1,25 @@
+//WAP to delete a number from a given location in an array.
+
+#include<stdio.h>
+
+int main()
+{
+    int i ,n,loc,arr[10];
+    printf("\n Enter the size of the array : ");
+    scanf("%d",&n);
+    printf("\n Enter the elements of the array : ");
+    for(i=0;i<n;i++)
+     scanf("%d",&arr[i]);
+
+    printf("\n Enter the position from which the number has to be deleted : ");
+    scanf(" %d",&loc);
+
+    for(i=loc;i<n-1;i++)
+      arr[i] = arr[i+1];
+    n--;
+    printf("\n The array after deletion is : ");
+
+    for(i=0;i<n;i++)
+      printf("\n arr[%d] = %d",i,arr[i]);
+    return 0;
+}
