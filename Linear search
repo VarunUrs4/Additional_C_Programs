@@ -1,7 +1,7 @@
 //WAP to implement linear search
 #include<stdio.h>
 
-static int main()
+int main()
 {   int arr[10], i, n, num;
     int found =0 , pos=-1;
     printf("\n Enter the number of elements in the array :");
