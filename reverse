@@ -1,0 +1,25 @@
+//WAP to reverse the given number
+
+#include<stdio.h>
+int reversal(int num);
+
+int main()
+{
+    int num;
+    printf("Enter the number : ");
+    scanf("%d",&num);
+    printf("The reversed number is : ");
+    reversal(num);
+    return 0;
+}
+int reversal(int num)
+{
+    int i;
+    while(num!=0)
+    {
+      i=num%10;
+      printf("%d",i);
+      num=num/10;
+    }
+    return num;
+}
