@@ -1,0 +1,57 @@
+//WAP to convert the decimal number into Binary,Octal and Hexadecimal number
+#include<stdio.h>
+#include<math.h>
+int binary_num(int decimal);
+int octal_num(int decimal);
+int hexadecimal_num(int decimal);
+
+int main()
+{
+    int decimal , binary=0 , r, i=0;
+
+    printf("\n Enter the decimal number : ");
+    scanf("%d",&decimal);
+    binary_num(decimal);
+    octal_num(decimal);
+    hexadecimal_num(decimal);
+    return 0;
+}
+int binary_num(int decimal)
+{
+    int r ,binary=0,i=0;
+    while(decimal!=0)
+    {
+      r = decimal%2;
+      binary += r*pow(10,i);
+      decimal = decimal/2;
+      i++;
+    }
+    printf("\n The binary equivalent = %d\n",binary);
+    return binary;
+}
+int octal_num(int decimal)
+{
+    int r ,octal=0,i=0;
+    while(decimal!=0)
+    {
+      r = decimal%8;
+      octal += r*pow(10,i);
+      decimal = decimal/8;
+      i++;
+    }
+    printf("\n The octal equivalent = %d\n",octal);
+    return octal;
+}
+int hexadecimal_num(int decimal)
+{
+    int r ,hexadecimal=0,i=0;
+    while(decimal!=0)
+    {
+      r = decimal%16;
+      hexadecimal += r*pow(10,i);
+      decimal = decimal/16;
+      i++;
+    }
+    printf("\n The hexadecimal equivalent = %d\n",hexadecimal);
+    return hexadecimal;
+}
